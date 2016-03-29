@@ -1,0 +1,11 @@
+<?php
+/**
+ * Implements hook_node_presave()
+ */
+function translit_url_node_presave($node) {
+  if($node->type == 'article'){
+    $url = $node -> field_url['und'][0]['value'];
+    $url = transliteration_get($url);
+    $node -> field_url['und'][0]['value'] = $url;
+  }
+}

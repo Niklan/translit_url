@@ -1,0 +1,6 @@
+name = Translit URL
+description = Translate text field named field_url in content type article
+core = 7.x
+version = 7.x - 1.0
+package = Other
+dependencies[] = transliteration
